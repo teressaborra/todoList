@@ -68,7 +68,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h2>Tasks</h2>
+      <h2>Task Management App</h2>
   <div className="add-task">
         <input
           type="text"
@@ -106,7 +106,7 @@ const Home = () => {
             </div>
             <div>
               <button onClick={() => deleteTask(task._id)}>Delete</button>
-              
+              <button onClick={() => handleEditClick(task)}>Edit</button> 
             </div>
             {editingTask && editingTask._id === task._id && (
               <div className="editing">
