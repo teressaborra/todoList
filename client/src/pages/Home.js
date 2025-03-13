@@ -34,7 +34,7 @@ const Home = () => {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete('https://todolist-n6vv.onrender.com/tasks/${id}`);
+await axios.delete(`https://todolist-n6vv.onrender.com/tasks/${id}`);
       setTasks(tasks.filter(task => task._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);
