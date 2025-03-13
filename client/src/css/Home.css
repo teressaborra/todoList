@@ -1,18 +1,19 @@
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #FFDEE9, #B5FFFC);
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #555;
 }
 
 .container {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
+  backdrop-filter: blur(10px);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -22,7 +23,7 @@ body {
 
 h2 {
   text-align: center;
-  color: #222;
+  color: #444;
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase;
@@ -35,25 +36,25 @@ ul {
 }
 
 li {
-  background: #f9f9f9;
+  background: #FAE3D9;
   margin: 12px 0;
   padding: 15px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 li:hover {
-  background: #eef3ff;
+  background: #FFDDE2;
   transform: translateY(-2px);
 }
 
 li h3 {
   margin: 0;
-  color: #222;
+  color: #444;
   font-size: 18px;
   font-weight: bold;
 }
@@ -65,8 +66,8 @@ li p {
 }
 
 button {
-  background: linear-gradient(to right, #007bff, #0056b3);
-  color: #fff;
+  background: linear-gradient(to right, #FFB6B9, #FAE3D9);
+  color: #444;
   border: none;
   padding: 10px 15px;
   border-radius: 6px;
@@ -77,7 +78,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #0056b3, #003d7a);
+  background: linear-gradient(to right, #FAE3D9, #FFB6B9);
   transform: scale(1.05);
 }
 
@@ -85,16 +86,17 @@ input[type="text"] {
   width: calc(100% - 20px);
   padding: 12px;
   margin: 10px 0;
-  border: 2px solid #ccc;
+  border: 2px solid #FFC3A0;
   border-radius: 6px;
   font-size: 16px;
+  background: #FFF5E4;
   transition: all 0.3s ease;
 }
 
 input[type="text"]:focus {
-  border-color: #007bff;
+  border-color: #FFB6B9;
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 182, 185, 0.3);
 }
 
 .editing {
