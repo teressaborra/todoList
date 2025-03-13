@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/tasks');
+        const response = await axios.get('https://todolist-n6vv.onrender.com/tasks');
         setTasks(response.data);
         console.log('Fetched Data:', response.data);
       } catch (error) {
@@ -23,7 +23,7 @@ const Home = () => {
 
   const addTask = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/tasks', newTask);
+      const response = await axios.post('https://todolist-n6vv.onrender.com/tasks', newTask);
       console.log('Added Task:', response.data);
       setTasks([...tasks, response.data.task]);
       setNewTask({ title: '', description: '', status: '' });
@@ -34,7 +34,7 @@ const Home = () => {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/tasks/${id}`);
+      await axios.delete('https://todolist-n6vv.onrender.com/tasks/${id}`);
       setTasks(tasks.filter(task => task._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -43,7 +43,7 @@ const Home = () => {
 
   const updateTask = async (id) => {
     try {
-      const response = await axios.put(`http://localhost:3000/tasks/${id}`, editingTask);
+      const response = await axios.put(`https://todolist-n6vv.onrender.com/tasks/${id}`, editingTask);
       console.log('Updated Task:', response.data);
       setTasks(tasks.map(task => (task._id === id ? response.data.task : task)));
       setEditingTask(null);
