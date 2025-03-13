@@ -1,0 +1,122 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  text-align: center;
+  color: #222;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background: #eef3ff;
+  transform: translateY(-2px);
+}
+
+li h3 {
+  margin: 0;
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+li p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+button {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #0056b3, #003d7a);
+  transform: scale(1.05);
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.editing {
+  display: flex;
+  flex-direction: column;
+}
+
+.editing input[type="text"] {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 30px auto;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  button {
+    margin-top: 10px;
+  }
+}
