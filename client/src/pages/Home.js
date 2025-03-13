@@ -69,6 +69,33 @@ const Home = () => {
   return (
     <div className="container">
       <h2>Tasks</h2>
+  <div className="add-task">
+        <input
+          type="text"
+          name="title"
+          value={newTask.title}
+          onChange={handleInputChange}
+          placeholder="Title"
+        />
+        <input
+          type="text"
+          name="description"
+          value={newTask.description}
+          onChange={handleInputChange}
+          placeholder="Description"
+        />
+        <input
+          type="text"
+          name="status"
+          value={newTask.status}
+          onChange={handleInputChange}
+          placeholder="Status"
+        />
+        <button onClick={addTask}>Add Task</button>
+      </div>
+
+
+    
       <ul>
         {tasks.map(task => (
           <li key={task._id}>
@@ -79,7 +106,7 @@ const Home = () => {
             </div>
             <div>
               <button onClick={() => deleteTask(task._id)}>Delete</button>
-              <button onClick={() => handleEditClick(task)}>Edit</button>
+              
             </div>
             {editingTask && editingTask._id === task._id && (
               <div className="editing">
@@ -110,30 +137,7 @@ const Home = () => {
           </li>
         ))}
       </ul>
-      <div className="add-task">
-        <input
-          type="text"
-          name="title"
-          value={newTask.title}
-          onChange={handleInputChange}
-          placeholder="Title"
-        />
-        <input
-          type="text"
-          name="description"
-          value={newTask.description}
-          onChange={handleInputChange}
-          placeholder="Description"
-        />
-        <input
-          type="text"
-          name="status"
-          value={newTask.status}
-          onChange={handleInputChange}
-          placeholder="Status"
-        />
-        <button onClick={addTask}>Add Task</button>
-      </div>
+    
     </div>
   );
 };
